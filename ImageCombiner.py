@@ -187,7 +187,7 @@ def whichHelmet():
 
 
 
-while(bCounter < 4401):
+while(bCounter < 2532):
     images[0] = Image.open(backgrounds + "/" + whichBackground()).convert("RGBA")
     backW = whichBackWing()
     images[1] = Image.open(back_wings + "/" + backW).convert("RGBA")
@@ -217,9 +217,9 @@ while(bCounter < 4401):
     #combining all layers
     for i in range(1,len(images)):
         final_image = Image.alpha_composite(final_image,images[i])
-        print(str(bCounter) + " images generated")
     #saving the image with the correct name and directory
-    #final_image.save(finalImages+"/BlessingAstronaut" +str(bCounter)+".png")
+    print(str(bCounter) + " images generated")
+    final_image.save(finalImages+"/Blessings Astronaut " +str(bCounter)+".png")
     bCounter += 1
 
     
