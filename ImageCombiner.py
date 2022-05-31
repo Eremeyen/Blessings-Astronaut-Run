@@ -18,6 +18,19 @@ helmets = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test R
 #final images destination
 finalImages = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run\Blessings"
 
+#dictionaries
+background_name = {}
+body_name = {}
+hair_name = {}
+tail_name = {}
+tattoo_name = {}
+fWing_name = {}
+bWing_name = {}
+horn_name = {}
+eye_name = {}
+helmet_name = {}
+
+
 #defining an empty images array which we'll use to come up with each final image
 images = []
 for i in range(len(os.listdir(r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run"))-3):
@@ -186,16 +199,35 @@ def whichHelmet():
 
 
 
+Metadata = {}
 
 while(bCounter < 2532):
-    images[0] = Image.open(backgrounds + "/" + whichBackground()).convert("RGBA")
+    blessing = {}
+
+    wBackground = whichBackground()
+    images[0] = Image.open(backgrounds + "/" + wBackground).convert("RGBA")
+    blessing["Background"] = background_name[wBackground]
+
     backW = whichBackWing()
     images[1] = Image.open(back_wings + "/" + backW).convert("RGBA")
+    blessing["Back Wing"] = bWing_name[backW]
+
     wTail = whichTail()
     images[2] = Image.open(tail + "/" + wTail).convert("RGBA")
-    images[3] = Image.open(bodies + "/" + whichBody()).convert("RGBA")
-    images[4] = Image.open(eyes + "/" + whichEye()).convert("RGBA")
-    images[5] = Image.open(tattoo + "/" + whichTattoo()).convert("RGBA")
+    blessing["Tail"] = tail_name[wTail]
+
+    wBody = whichBody()
+    images[3] = Image.open(bodies + "/" + wBody).convert("RGBA")
+    blessing["Body"] = body_name[wBody]
+
+    wEye = whichEye()
+    images[4] = Image.open(eyes + "/" + wEye).convert("RGBA")
+    blessing["Eyes"] = eye_name[wEye]
+
+    wTattoo = whichTattoo()
+    images[5] = Image.open(tattoo + "/" + wTattoo).convert("RGBA")
+    blessing["Tattoo"] = tattoo_name[wTattoo]
+
     #determining which front wing to use
     fWing = ""
     if(backW[:4] == "RARE"):
@@ -203,6 +235,8 @@ while(bCounter < 2532):
     else:
         fWing = "FRONT WING " + backW[-5] + ".png"
     images[6] = Image.open(front_wings + "/" + fWing).convert("RGBA") #front wing
+    blessing["Front Wing"] = fWing_name[fWing]
+
     #determining which hair to use
     wHair =""
     if(wTail[:4] == "RARE"):
@@ -210,16 +244,33 @@ while(bCounter < 2532):
     else:
         wHair = "HAIR " + wTail[-5] + ".png"
     images[7] = Image.open(hair + "/" + wHair).convert("RGBA") #hair
-    images[8] = Image.open(horn + "/" + whichHorn()).convert("RGBA")
-    images[9] = Image.open(helmets + "/" + whichHelmet()).convert("RGBA")
+    blessing["Hair"] = hair_name[wHair]
+
+    wHorn = whichHorn()
+    images[8] = Image.open(horn + "/" + wHorn).convert("RGBA")
+    blessing["Horn"] = horn_name[wHorn]
+
+    wHelmet = whichHelmet()
+    images[9] = Image.open(helmets + "/" + wHelmet).convert("RGBA")
+    blessing["Helmet"] = helmet_name[wHelmet]
+
     final_image = images[0]
 
     #combining all layers
     for i in range(1,len(images)):
         final_image = Image.alpha_composite(final_image,images[i])
     #saving the image with the correct name and directory
-    print(str(bCounter) + " images generated")
     final_image.save(finalImages+"/Blessings Astronaut " +str(bCounter)+".png")
+
+    if(bCounter < 10):
+        id = "Astronaut 000" + str(bCounter)
+    elif(bCounter < 100):
+        id = "Astronaut 00" + str(bCounter)
+    elif(bCounter < 1000):
+        id = "Astronaut 0" + str(bCounter)
+    else:
+        id = "Astronaut " + str(bCounter)
+    Metadata[id] = blessing
     bCounter += 1
 
     
