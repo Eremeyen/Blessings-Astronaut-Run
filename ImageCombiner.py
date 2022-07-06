@@ -43,82 +43,82 @@ background_name = {
     "ASTRONAUT RARE BACKGROUND 1.png":"Blue Waves",
 }
 body_name = {
-    "ASTRONAUT BODY 1.png":"",
-    "ASTRONAUT BODY 2.png":"",
-    "ASTRONAUT BODY 3.png":"",
+    "ASTRONAUT BODY 1.png":"Grace",
+    "ASTRONAUT BODY 2.png":"Comet",
+    "ASTRONAUT BODY 3.png":"Fluffy Grace",
 
-    "ASTRONAUT RARE BODY 1.png":"",
-    "ASTRONAUT RARE BODY 2.png":""
+    "ASTRONAUT RARE BODY 1.png":"Rain",
+    "ASTRONAUT RARE BODY 2.png":"Crystal"
 }
 hair_name = {
-    "ASTRONAUT HAIR 1.png":"",
-    "ASTRONAUT HAIR 2.png":"",
-    "ASTRONAUT HAIR 3.png":"",
+    "ASTRONAUT HAIR 1.png":"White hair",
+    "ASTRONAUT HAIR 2.png":"Blue hair",
+    "ASTRONAUT HAIR 3.png":"Pink hair",
 
-    "ASTRONAUT RARE HAIR 1.png":"",
-    "ASTRONAUT RARE HAIR 2.png":"",
+    "ASTRONAUT RARE HAIR 1.png":"Navy curly hair",
+    "ASTRONAUT RARE HAIR 2.png":"Purple curly hair",
 
 }
 tail_name = {
-    "ASTRONAUT TAIL 1.png":"",
-    "ASTRONAUT TAIL 2.png":"",
-    "ASTRONAUT TAIL 3.png":"",
+    "ASTRONAUT TAIL 1.png":"White tail",
+    "ASTRONAUT TAIL 2.png":"Blue tail",
+    "ASTRONAUT TAIL 3.png":"Pink tail",
 
-    "ASTRONAUT RARE TAIL 1.png":"",
-    "ASTRONAUT RARE TAIL 2.png":""
+    "ASTRONAUT RARE TAIL 1.png":"Navy curly tail",
+    "ASTRONAUT RARE TAIL 2.png":"Purple curly tail"
 }
 tattoo_name = {
-    "220329-0959-BOS LAYER.png":"",
-    "ASTRONAUT TATTOO 1.png":"",
-    "ASTRONAUT TATTOO 2.png":"",
-    "ASTRONAUT TATTOO 3.png":"",
-    "ASTRONAUT TATTOO 4.png":"",
-    "ASTRONAUT TATTOO 5.png":""
+    "220329-0959-BOS LAYER.png":"none",
+    "ASTRONAUT TATTOO 1.png":"Blue moon",
+    "ASTRONAUT TATTOO 2.png":"Yellow sun",
+    "ASTRONAUT TATTOO 3.png":"Light blue sun",
+    "ASTRONAUT TATTOO 4.png":"Mint sun",
+    "ASTRONAUT TATTOO 5.png":"Purple sun"
     
 }
 fWing_name = {
-    "ASTRONAUT FRONT WING 1.png":"",
-    "ASTRONAUT FRONT WING 2.png":"",
-    "ASTRONAUT FRONT WING 3.png":"",
-    "ASTRONAUT FRONT WING 4.png":"",
-    "ASTRONAUT RARE FRONT WING 1.png":"",
-    "ASTRONAUT RARE FRONT WING 2.png":"",
-    "ASTRONAUT RARE FRONT WING 3.png":"",
+    "ASTRONAUT FRONT WING 1.png":"Blue shimmer front wing",
+    "ASTRONAUT FRONT WING 2.png":"Purple front wing",
+    "ASTRONAUT FRONT WING 3.png":"Blue front wing",
+    "ASTRONAUT FRONT WING 4.png":"Navy front wing",
+    "ASTRONAUT RARE FRONT WING 1.png":"Neon blue shimmer front wing",
+    "ASTRONAUT RARE FRONT WING 2.png":"Black glitter front wing",
+    "ASTRONAUT RARE FRONT WING 3.png":"Black front wing",
 }
 bWing_name = {
-    "ASTRONAUT BACK WING ?.png":"",
-    "ASTRONAUT BACK WING 2.png":"",
-    "ASTRONAUT BACK WING 3.png":"",
-    "ASTRONAUT BACK WING 4.png":"",
-    "ASTRONAUT RARE BACK WING 1.png":"",
-    "ASTRONAUT RARE BACK WING 2.png":"",
-    "ASTRONAUT RARE BACK WING 3.png":""
+    "ASTRONAUT BACK WING ?.png":"Blue shimmer back wing",
+    "ASTRONAUT BACK WING 2.png":"Purple back wing",
+    "ASTRONAUT BACK WING 3.png":"Blue back wing",
+    "ASTRONAUT BACK WING 4.png":"Navy back wing",
+    "ASTRONAUT RARE BACK WING 1.png":"Neon blue shimmer back wing",
+    "ASTRONAUT RARE BACK WING 2.png":"Black glitter back wing",
+    "ASTRONAUT RARE BACK WING 3.png":"Black back wing"
 }
 horn_name = {
-    "ASTRONAUT HORN 1.png":"",
-    "ASTRONAUT HORN 2.png":"",
-    "ASTRONAUT HORN 3.png":"",
-    "ASTRONAUT HORN 4.png":"",
+    "ASTRONAUT HORN 1.png":"Light blue horn",
+    "ASTRONAUT HORN 2.png":"Gold horn",
+    "ASTRONAUT HORN 3.png":"Purple horn",
+    "ASTRONAUT HORN 4.png":"Mint horn",
 }
 eye_name = {
-    "ASTRONAUT EYE F1.png":"",
-    "ASTRONAUT EYE F2.png":"",
-    "ASTRONAUT EYE F3.png":"",
-    "ASTRONAUT EYE F4.png":"",
-    "ASTRONAUT EYE M1.png":"",
-    "ASTRONAUT EYE M2.png":"",
-    "ASTRONAUT EYE M3.png":"",
-    "ASTRONAUT EYE M4.png":"",
+    "ASTRONAUT EYE F1.png":"Female blue eye",
+    "ASTRONAUT EYE F2.png":"Female azure eye",
+    "ASTRONAUT EYE F3.png":"Female purple eye",
+    "ASTRONAUT EYE F4.png":"Female green eye",
+    "ASTRONAUT EYE M1.png":"Male blue eye",
+    "ASTRONAUT EYE M2.png":"Male azure eye",
+    "ASTRONAUT EYE M3.png":"Male purple eye",
+    "ASTRONAUT EYE M4.png":"Male green eye",
 }
 helmet_name = {
-    "ASTRONAUT HELMET 1.png":"",
-    "ASTRONAUT HELMET 2.png":"",
-    "ASTRONAUT HELMET 3.png":"",
-    "ASTRONAUT HELMET 4.png":"",
-    "ASTRONAUT HELMET 5.png":"",
-    "ASTRONAUT HELMET 6.png":"",
-    "ASTRONAUT HELMET 7.png":"",
-    "ASTRONAUT HELMET 8.png":"",
+    "ASTRONAUT HELMET 1.png":"Pearl helmet",
+    "ASTRONAUT HELMET 2.png":"Navy helmet",
+    "ASTRONAUT HELMET 3.png":"Sunflower helmet",
+    "ASTRONAUT HELMET 4.png":"Spike helmet",
+    "ASTRONAUT HELMET 5.png":"Purple helmet",
+    "ASTRONAUT HELMET 6.png":"Hermes helmet",
+    "ASTRONAUT HELMET 7.png":"Glitter Hermes helmet",
+    "ASTRONAUT HELMET 8.png":"Foam blue helmet",
 }
 
 
