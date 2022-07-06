@@ -2,38 +2,129 @@ from PIL import Image
 import os
 from os import listdir
 from random import random
+import csv
 
 #attribute folders:
-backgrounds = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run\Backgrounds"
-bodies = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run\Bodies"
-hair = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run\Hair"
-tail = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run\Tail"
-tattoo = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run\Tattoo"
-front_wings = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run\Front_Wings"
-back_wings = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run\Back_Wings"
-horn = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run\Horn"
-eyes = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run\Eye"
-helmets = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run\Helmet"
+backgrounds = r"Backgrounds"
+bodies = r"Bodies"
+hair = r"Hair"
+tail = r"Tail"
+tattoo = r"Tattoo"
+front_wings = r"Front_Wings"
+back_wings = r"Back_Wings"
+horn = r"Horn"
+eyes = r"Eye"
+helmets = r"Helmet"
 
 #final images destination
-finalImages = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run\Blessings"
+finalImages = r"Blessings"
 
 #dictionaries
-background_name = {}
-body_name = {}
-hair_name = {}
-tail_name = {}
-tattoo_name = {}
-fWing_name = {}
-bWing_name = {}
-horn_name = {}
-eye_name = {}
-helmet_name = {}
+background_name = {
+    "ASTRONAUT BACKGROUND 1.png":"",
+    "ASTRONAUT BACKGROUND 1.png":"",
+    "ASTRONAUT BACKGROUND 1.png":"",
+    "ASTRONAUT BACKGROUND 1.png":"",
+    "ASTRONAUT BACKGROUND 1.png":"",
+    "ASTRONAUT BACKGROUND 1.png":"",
+    "ASTRONAUT BACKGROUND 1.png":"",
+    
+    "ASTRONAUT GRADIENT BACKGROUND 1.png":"",
+    "ASTRONAUT GRADIENT BACKGROUND 1.png":"",
+    "ASTRONAUT GRADIENT BACKGROUND 1.png":"",
+    "ASTRONAUT GRADIENT BACKGROUND 1.png":"",
+    "ASTRONAUT GRADIENT BACKGROUND 1.png":"",
+    "ASTRONAUT GRADIENT BACKGROUND 1.png":"",
+    "ASTRONAUT GRADIENT BACKGROUND 1.png":"",
+
+    "ASTRONAUT RARE BACKGROUND 1.png":"",
+    "ASTRONAUT RARE BACKGROUND 1.png":"",
+    "ASTRONAUT RARE BACKGROUND 1.png":"",
+    "ASTRONAUT RARE BACKGROUND 1.png":"",
+}
+body_name = {
+    "ASTRONAUT BODY 1.png":"",
+    "ASTRONAUT BODY 2.png":"",
+    "ASTRONAUT BODY 3.png":"",
+
+    "ASTRONAUT RARE BODY 1.png":"",
+    "ASTRONAUT RARE BODY 2.png":""
+}
+hair_name = {
+    "ASTRONAUT HAIR 1.png":"",
+    "ASTRONAUT HAIR 2.png":"",
+    "ASTRONAUT HAIR 3.png":"",
+
+    "ASTRONAUT RARE HAIR 1.png":"",
+    "ASTRONAUT RARE HAIR 2.png":"",
+
+}
+tail_name = {
+    "ASTRONAUT TAIL 1.png":"",
+    "ASTRONAUT TAIL 2.png":"",
+    "ASTRONAUT TAIL 3.png":"",
+
+    "ASTRONAUT RARE TAIL 1.png":"",
+    "ASTRONAUT RARE TAIL 2.png":""
+}
+tattoo_name = {
+    "220329-0959-BOS LAYER.png":"",
+    "ASTRONAUT TATTOO 1.png":"",
+    "ASTRONAUT TATTOO 2.png":"",
+    "ASTRONAUT TATTOO 3.png":"",
+    "ASTRONAUT TATTOO 4.png":"",
+    "ASTRONAUT TATTOO 5.png":""
+    
+}
+fWing_name = {
+    "ASTRONAUT FRONT WING 1.png":"",
+    "ASTRONAUT FRONT WING 2.png":"",
+    "ASTRONAUT FRONT WING 3.png":"",
+    "ASTRONAUT FRONT WING 4.png":"",
+    "ASTRONAUT RARE FRONT WING 1.png":"",
+    "ASTRONAUT RARE FRONT WING 2.png":"",
+    "ASTRONAUT RARE FRONT WING 3.png":"",
+}
+bWing_name = {
+    "ASTRONAUT BACK WING ?.png":"",
+    "ASTRONAUT BACK WING 2.png":"",
+    "ASTRONAUT BACK WING 3.png":"",
+    "ASTRONAUT BACK WING 4.png":"",
+    "ASTRONAUT RARE BACK WING 1.png":"",
+    "ASTRONAUT RARE BACK WING 2.png":"",
+    "ASTRONAUT RARE BACK WING 3.png":""
+}
+horn_name = {
+    "ASTRONAUT HORN 1.png":"",
+    "ASTRONAUT HORN 2.png":"",
+    "ASTRONAUT HORN 3.png":"",
+    "ASTRONAUT HORN 4.png":"",
+}
+eye_name = {
+    "ASTRONAUT EYE F1.png":"",
+    "ASTRONAUT EYE F2.png":"",
+    "ASTRONAUT EYE F3.png":"",
+    "ASTRONAUT EYE F4.png":"",
+    "ASTRONAUT EYE M1.png":"",
+    "ASTRONAUT EYE M2.png":"",
+    "ASTRONAUT EYE M3.png":"",
+    "ASTRONAUT EYE M4.png":"",
+}
+helmet_name = {
+    "ASTRONAUT HELMET 1.png":"",
+    "ASTRONAUT HELMET 2.png":"",
+    "ASTRONAUT HELMET 3.png":"",
+    "ASTRONAUT HELMET 4.png":"",
+    "ASTRONAUT HELMET 5.png":"",
+    "ASTRONAUT HELMET 6.png":"",
+    "ASTRONAUT HELMET 7.png":"",
+    "ASTRONAUT HELMET 8.png":"",
+}
 
 
 #defining an empty images array which we'll use to come up with each final image
 images = []
-for i in range(len(os.listdir(r"C:\Users\meren\OneDrive\Masaüstü\Blessings Astronaut Rarity Test Run"))-3):
+for i in range(len(os.listdir("."))-3):
     images.append("")
 
 
@@ -199,10 +290,20 @@ def whichHelmet():
 
 
 
-Metadata = {}
+Metadata = []
 
 while(bCounter < 2532):
     blessing = {}
+
+    if(bCounter < 10):
+        id = "000" + str(bCounter)
+    elif(bCounter < 100):
+        id = "00" + str(bCounter)
+    elif(bCounter < 1000):
+        id = "0" + str(bCounter)
+    else:
+        id = str(bCounter)
+    blessing["id"] = int(id)
 
     wBackground = whichBackground()
     images[0] = Image.open(backgrounds + "/" + wBackground).convert("RGBA")
@@ -262,16 +363,15 @@ while(bCounter < 2532):
     #saving the image with the correct name and directory
     final_image.save(finalImages+"/Blessings Astronaut " +str(bCounter)+".png")
 
-    if(bCounter < 10):
-        id = "Astronaut 000" + str(bCounter)
-    elif(bCounter < 100):
-        id = "Astronaut 00" + str(bCounter)
-    elif(bCounter < 1000):
-        id = "Astronaut 0" + str(bCounter)
-    else:
-        id = "Astronaut " + str(bCounter)
-    Metadata[id] = blessing
+    Metadata.append(blessing)
     bCounter += 1
+
+main_info = ["id","Background","Back Wing","Tail","Body","Eyes","Tattoo","Front Wing","Hair","Horn","Helmet"]
+
+with open("metadata.csv", "w") as csvfile:
+    writer = csv.DictWriter(csvfile,fieldnames= main_info)
+    writer.writeHeader()
+    writer.writerows(Metadata)
 
     
 
